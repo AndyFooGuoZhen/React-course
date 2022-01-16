@@ -1,0 +1,39 @@
+
+//Components 
+//Youc can add several components and combine them into one big component
+//Example, adding a tweet to a div
+
+
+function App(){
+
+const time = new Date().toLocaleDateString();
+const buttonStyle = {color:'red',fontSize:20} //adding css
+const alertHandler = ()=>{
+    alert('hey');
+}
+
+
+   return (
+       <div>
+       <h1 style={buttonStyle}> {time} </h1> 
+       <button onClick={alertHandler}>Submit</button>
+       <Tweet/> 
+       <Tweet/> 
+       <Tweet/> 
+       //*****************************************notice that the function Tweet is added like a html tag//
+       </div>
+   );
+}
+
+
+function Tweet(){
+  return(
+  <div>
+      <h2>Tweet</h2>
+      <p>This stuff is pretty cool</p>
+      
+  </div>);
+}
+
+
+ReactDom.render(App(),document.querySelector('#root') );

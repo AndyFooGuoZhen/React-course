@@ -1,0 +1,62 @@
+React syntax
+
+React.createElement(a,b,c)
+
+a => what kind of element we want to create
+b => property of the element
+c => what is between the h1 (innerHTML /  innerText)
+
+example
+React.createElement('h1',null, 'Hello React');
+
+
+ReactDOM.render(a,b)
+a => what you want to render
+b => the location you want to render the html
+
+
+
+Example
+
+index.html
+<div id = "root"></div>
+
+app.js
+//render the html at id = root
+ReactDom.render(React.createElement('h1',null, 'Hello React'),document.querySelector('#root'));
+
+
+2nd example with a function and JSX
+
+
+function App(){
+
+const time = new Date().toLocaleDateString();
+const buttonStyle = {color:'red',fontSize:20} //adding css
+const alertHandler = ()=>{
+    alert('hey');
+}
+
+
+   return (
+       <div>
+       <h1 style={buttonStyle}>{time}</h1> 
+
+       //if you want the value of a variable to show in a tag, use curly braces
+       //css added too
+
+
+       <button onClick={alertHandler} >Submit</button>
+
+       //add onClick events directly to button without adding eventlistener
+
+       </div>
+   );
+}
+
+ReactDom.render(App(),document.querySelector('#root') );
+
+
+
+
+

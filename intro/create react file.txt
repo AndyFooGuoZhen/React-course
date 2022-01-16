@@ -1,0 +1,4 @@
+Everytime we want to create a new react project
+1. we navigate to a folder and open new terminal (under terminal tab)
+2. Type npx create-react-app fileName into terminal and hit enter
+3. to start the file, type mpm start

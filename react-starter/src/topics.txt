@@ -1,0 +1,36 @@
+1.props
+    used to pass in data from outer component to
+    inner component
+2. events   
+    something like eventlistener
+    if any function occurs prior to an event , add arrow function
+    so that it doesnt invoke automatically
+3. state
+    value of a variable updates synchronously with UI
+    useState
+    setName
+    you can pass states as props too
+4. removing a component based on a state
+    return components with the condition that their "tweet"
+    !== a specific tweet
+5. UUID
+    when both tweets have same message, the two tweets will be 
+    deleted together
+    Solution: 1. npm install uuid
+              2. import { v4 as uuidv4 } from "uuid"; 
+                 at the place where a tweet is created
+              3. incorporate id and messages as objects 
+                within array
+             4. filter tweets and delete them based on uuid
+6. CSS
+    create a new css file
+    import "./style/app.css"; into app.js
+7. useEffect
+    a) auto runs a function everytime a component is rendered
+       provided that the second parameter is an empty array
+        EX: useEffect(func, [])
+    b) runs a function everytime a state changes
+        provided that the state is passed in as the second parameter
+        (enclosed in array [] symbols)
+        EX: Synchronously updates search items on search bar
+             everytime a letter is typed
