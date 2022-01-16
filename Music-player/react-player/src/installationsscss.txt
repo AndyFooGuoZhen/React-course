@@ -1,0 +1,32 @@
+To install fontawesome
+ 1. go to fontawesome react website
+
+ 2. paste the links into terminal (one by one and hit enter)
+    npm i --save @fortawesome/fontawesome-svg-core
+    npm install --save @fortawesome/free-solid-svg-icons
+    npm install --save @fortawesome/react-fontawesome
+
+3. go to intended js file and import the following
+    import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+    import { iconName } from '@fortawesome/free-solid-svg-icons'
+
+4. To use icon
+    paste this <FontAwesomeIcon className="play" size ="2x" icon={faPlay} />
+
+SCSS
+1. Something like css
+
+Usage:
+1. create a .scss file 
+2. At main app.js file, import "./styles/app.scss";
+3. styling at scss is the same as css
+
+Component based styling
+1. create _nameOfComponent.scss files for Components
+2. at main app.scss file,
+         @import "./nameOfComponentWithout_";
+
+        EX: name of component : song.js
+        name of scss : _song.scss
+        @import "./song";
+
