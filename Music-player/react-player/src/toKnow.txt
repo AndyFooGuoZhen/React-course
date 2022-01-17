@@ -1,0 +1,13 @@
+Ref
+Reference
+
+when we want to select a html tag , but we can't do so using a document selector
+EX: creating a function on top of a return JSAX function
+
+import { useRef } from "react";
+const audioRef = useRef(null);
+
+In JSAX,
+<audio ref={audioRef} src={currentSong.audio}></audio>
+
+null is starting value, something similar to useState
