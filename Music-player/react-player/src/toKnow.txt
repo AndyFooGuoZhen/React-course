@@ -35,3 +35,12 @@ const [songInfo, setSongInfo] = useState({
 
   //onLoadedMetadata
   event listener that triggers when a JSAX tag is rendered
+
+  //when item not loaded, inout max value is Nan
+  To fix this set <input
+          min={0}
+          max={songInfo.duration || 0}
+          value={songInfo.currentTime}
+          onChange={dragHandler}
+          type="range"
+        />
