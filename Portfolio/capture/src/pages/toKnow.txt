@@ -1,0 +1,12 @@
+Styled components
+1. Go to the component you wish to Style
+2. import styled from "styled-components";
+3. go all the way down , right before export default
+4. make a variable and associaate with style.(html tag)
+
+EX: const button = style.button`
+//CSS code here
+`
+
+5. replace html tag with variable name 
+EX: <button></button>
