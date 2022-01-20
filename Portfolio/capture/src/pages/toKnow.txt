@@ -10,3 +10,79 @@ EX: const button = style.button`
 
 5. replace html tag with variable name 
 EX: <button></button>
+
+Global styling
+make new js file (refer to globalstyle.js)
+write globaltag at the top of all html tag in app.js
+
+
+React router
+allow components to rerender instead of directing to a seperate .html file
+
+1. go to index.js
+2. import { BrowserRouter } from "react-router-dom";
+3. wrap <App\> with <BrowserRouter>
+4. go to app.js
+5. import {Routes , Routes } "react-router-dom"
+6. Above component to be rendered, wrap the components with <Routes><Routes/>
+7. For each individual component
+    Create a route with exact path
+    <Route path="/" exact element={<AboutUs />} />
+    <Route path="/work" exact element={<OurWork />} />
+    <Route path="/contact" exact element={<ContactUs />} />
+8. Go to nav bar, place where a tags were used to direct sections
+    import {Link} from "react-router-dom"
+    replace all a tags with Link
+    remove href and replacce it with to="/path"
+
+
+path with :
+unspecific path behind : 
+
+
+useLocation
+returns url of current page
+use url.pathname to get current url path
+
+return JSX tags when a condition is met
+make sure to include fraction <></>
+return (<> {boolean && (all the tags )}</>)
+
+setState
+//NOTE: if object is an array , always remember to return element of the array
+setState(array[0])
+
+
+map
+//.map functions usuallu returns arrays
+//Special case: when arrow function returns JSX
+//NOTE: Parentheses goes behind arrow function, not curly braces
+
+EX: movies.map((movie)=>(<div><div/>))
+
+
+FramerMotion animation library
+import { motion } from "framer-motion";
+add motion. infront of tag to animate
+
+EX
+<motion.h2
+              animate={{ opacity: 1, transition: { duration: 2 } }}
+              initial={{ opacity: 0 }}
+            >
+              We work to make{" "}
+            </motion.h2>
+
+We can make it into an object, and apply the animation via motion
+EX2 equiv
+
+const titleAnim = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 2 } },
+  };
+
+<motion.h2
+              variants={titleAnim} initial="hidden" animate="show"
+            >
+              We work to make{" "}
+            </motion.h2>
