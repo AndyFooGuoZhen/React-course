@@ -126,7 +126,7 @@ else it rejects
 In this case, the outcome would be "Success from p and resolved from b"
 
 
-## Automatically passing result from previosu promise to current resolve
+## Automatically passing result from previous promise to current resolve
 
 ```
 let p =  new Promise((resolve, reject)=>{
